@@ -19,10 +19,18 @@ const UserCard: React.FC<UserProps> = ({
       <div className="mt-4 flex items-center justify-between text-sm text-gray-500">
         <span>User ID: {email}</span>
         <span>Post ID: {id}</span>
-        <span>Address: {address}</span>
+        <span>City: {address.city}</span>
+        <span>lat: {address.geo.lat}</span>
+        <span>lng: {address.geo.lng}</span>
+
+        <span>Street: {address.street}</span>
+        <span>Suite: {address.suite}</span>
+        <span>Zipcode: {address.zipcode}</span>
         <span>Phone: {phone}</span>
         <span>Website: {website}</span>
-        <span>Company: {company}</span>
+        <span>Company Name: {company.name}</span>
+        <span>Catch Phrase: {company.catchPhrase}</span>
+        <span>BS: {company.bs}</span>
       </div>
     </div>
   );
