@@ -1,5 +1,5 @@
 import { UserProps } from "@/interfaces";
-const UserCard = ({
+const UserCard: React.FC<UserProps> = ({
   id,
   name,
   username,
@@ -15,7 +15,6 @@ const UserCard = ({
         <h2 className="text-2xl font-semibold text-gray-800">{name}</h2>
       </div>
       <p className="text-gray-600">{username}</p>
-      <UserProps />
 
       <div className="mt-4 flex items-center justify-between text-sm text-gray-500">
         <span>User ID: {email}</span>
