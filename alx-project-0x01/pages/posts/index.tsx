@@ -6,7 +6,7 @@ import { PostData, PostProps } from "@/interfaces";
 
 const Posts: React.FC<{ posts: PostProps[] }> = ({ posts }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [Post, setPost] = useState<PostData | null>(null);
+  const [post, setPost] = useState<PostData | null>(null);
 
   console.log(posts);
   const handleAddPost = (newPost: PostData) => {
