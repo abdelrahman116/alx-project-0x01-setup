@@ -6,11 +6,11 @@ import { PostData, PostProps } from "@/interfaces";
 
 const Posts: React.FC<{ posts: PostProps[] }> = ({ posts }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [Posts, setPosts] = useState<PostData | null>(null);
+  const [Post, setPost] = useState<PostData | null>(null);
 
   console.log(posts);
   const handleAddPost = (newPost: PostData) => {
-    setPosts({ ...newPost, id: posts.length + 1 });
+    setPost({ ...newPost, id: posts.length + 1 });
   };
   return (
     <div className="flex flex-col h-screen">
