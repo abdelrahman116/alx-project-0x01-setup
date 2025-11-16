@@ -5,6 +5,7 @@ import Header from "@/components/layout/Header";
 import { PostData, PostProps } from "@/interfaces";
 
 const Posts: React.FC<{ posts: PostProps[] }> = ({ posts }) => {
+  //   const [isModalOpen, setModalOpen] = useState(false);
   const [isModalOpen, setModalOpen] = useState(false);
   const [post, setPost] = useState<PostData | null>(null);
 
