@@ -1,20 +1,36 @@
 import UserCard from "@/components/common/UserCard";
 import Header from "@/components/layout/Header";
-const Users = () => {
+import { UserProps } from "@/interfaces";
+const Users = ({ posts }: { posts: UserProps[] }) => {
   return (
     <div>
       <h1>Users Index Page</h1>
+
       <Header />
-      <UserCard
-        id={undefined}
-        name={undefined}
-        username={undefined}
-        email={undefined}
-        address={undefined}
-        phone={undefined}
-        website={undefined}
-        company={undefined}
-      />
+      {posts.map(
+        ({
+          id,
+          name,
+          username,
+          email,
+          address,
+          phone,
+          website,
+          company,
+        }: UserProps) => (
+          <UserCard
+            key={id}
+            id={id}
+            name={name}
+            username={username}
+            email={email}
+            address={address}
+            phone={phone}
+            website={website}
+            company={company}
+          />
+        )
+      )}
     </div>
   );
 };
