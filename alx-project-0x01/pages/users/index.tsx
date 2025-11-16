@@ -1,10 +1,20 @@
+import UserCard from "@/components/common/UserCard";
 import Header from "@/components/layout/Header";
-
-const UsersIndex = () => {
+const Users = () => {
   return (
     <div>
       <h1>Users Index Page</h1>
       <Header />
+      <UserCard
+        id={undefined}
+        name={undefined}
+        username={undefined}
+        email={undefined}
+        address={undefined}
+        phone={undefined}
+        website={undefined}
+        company={undefined}
+      />
     </div>
   );
 };
@@ -19,4 +29,4 @@ export async function getStaticProps() {
   };
 }
 
-export default UsersIndex;
+export default Users;

@@ -1,4 +1,4 @@
-import { UserCardProps } from "@/interfaces";
+import { UserProps } from "@/interfaces";
 const UserCard = ({
   id,
   name,
